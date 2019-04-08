@@ -49,9 +49,8 @@ namespace CRMFacilitoInicial.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Nombre de usuario")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -65,8 +64,16 @@ namespace CRMFacilitoInicial.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Nombre completo")]
+        public string NombreCompleto { get; set; }
+
+        [Required]
+        [Display(Name = "Nombre de usuario")]
+        public string UserName{ get; set; }
+
+        [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Correo Electronico")]
         public string Email { get; set; }
 
         [Required]
